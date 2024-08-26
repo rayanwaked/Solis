@@ -2,6 +2,7 @@
 
 ## Project Structure
 
+```
 Solis/
 ├── Solis/
 │   ├── Info
@@ -18,3 +19,4 @@ Solis/
 │       ├── Preview Content/
 │       ├── Assets
 │       └── SIzes
+```

@@ -5,20 +5,19 @@
 //  Created by Rayan Waked on 8/21/24.
 //
 
+// MARK: - IMPORT
 import SwiftUI
 
+// MARK: - VIEW
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            HomeView()
         }
-        .padding()
     }
 }
 
+// MARK: - PREVIEW
 #Preview {
     ContentView()
 }

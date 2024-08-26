@@ -7,18 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B91527D92C7982E300A4AF5D /* HealthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91527D82C7982E300A4AF5D /* HealthHelper.swift */; };
+		B91B4F892C79761F00749A98 /* HealthFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B4F882C79761F00749A98 /* HealthFetch.swift */; };
+		B9333B152C76A1E700FC796E /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9333B142C76A1E700FC796E /* ContentViewModel.swift */; };
+		B9333B172C76A1F400FC796E /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9333B162C76A1F400FC796E /* ContentModel.swift */; };
 		B93946322C7657630037C35A /* SolisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93946312C7657630037C35A /* SolisApp.swift */; };
 		B93946342C7657630037C35A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93946332C7657630037C35A /* ContentView.swift */; };
 		B93946362C7657640037C35A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B93946352C7657640037C35A /* Assets.xcassets */; };
 		B93946392C7657640037C35A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B93946382C7657640037C35A /* Preview Assets.xcassets */; };
+		B9637E9A2C76A5DC00CCD24E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9637E992C76A5DC00CCD24E /* HomeView.swift */; };
+		B9637E9C2C77CAE400CCD24E /* SIzes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9637E9B2C77CAE400CCD24E /* SIzes.swift */; };
+		B9637E9F2C78ED8F00CCD24E /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9637E9E2C78ED8F00CCD24E /* HealthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B91527D82C7982E300A4AF5D /* HealthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHelper.swift; sourceTree = "<group>"; };
+		B91B4F882C79761F00749A98 /* HealthFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthFetch.swift; sourceTree = "<group>"; };
+		B9333B142C76A1E700FC796E /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		B9333B162C76A1F400FC796E /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		B939462E2C7657630037C35A /* Solis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Solis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93946312C7657630037C35A /* SolisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolisApp.swift; sourceTree = "<group>"; };
 		B93946332C7657630037C35A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B93946352C7657640037C35A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B93946382C7657640037C35A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B9637E992C76A5DC00CCD24E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B9637E9B2C77CAE400CCD24E /* SIzes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIzes.swift; sourceTree = "<group>"; };
+		B9637E9E2C78ED8F00CCD24E /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		B9637EA02C78EDD300CCD24E /* Solis.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Solis.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +47,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B9333B112C76A10700FC796E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B93946372C7657640037C35A /* Preview Content */,
+				B93946352C7657640037C35A /* Assets.xcassets */,
+				B9637E9B2C77CAE400CCD24E /* SIzes.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B9333B122C76A1AF00FC796E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B9333B132C76A1DB00FC796E /* Content */,
+				B9333B182C76A1FD00FC796E /* Home */,
+				B9637E9D2C78ED7D00CCD24E /* HealthKit */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B9333B132C76A1DB00FC796E /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				B9333B162C76A1F400FC796E /* ContentModel.swift */,
+				B9333B142C76A1E700FC796E /* ContentViewModel.swift */,
+				B93946332C7657630037C35A /* ContentView.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		B9333B182C76A1FD00FC796E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B9637E992C76A5DC00CCD24E /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		B93946252C7657630037C35A = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +104,10 @@
 		B93946302C7657630037C35A /* Solis */ = {
 			isa = PBXGroup;
 			children = (
+				B9637EA02C78EDD300CCD24E /* Solis.entitlements */,
 				B93946312C7657630037C35A /* SolisApp.swift */,
-				B93946332C7657630037C35A /* ContentView.swift */,
-				B93946352C7657640037C35A /* Assets.xcassets */,
-				B93946372C7657640037C35A /* Preview Content */,
+				B9333B122C76A1AF00FC796E /* Modules */,
+				B9333B112C76A10700FC796E /* Assets */,
 			);
 			path = Solis;
 			sourceTree = "<group>";
@@ -65,6 +118,16 @@
 				B93946382C7657640037C35A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B9637E9D2C78ED7D00CCD24E /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				B91B4F882C79761F00749A98 /* HealthFetch.swift */,
+				B91527D82C7982E300A4AF5D /* HealthHelper.swift */,
+				B9637E9E2C78ED8F00CCD24E /* HealthManager.swift */,
+			);
+			path = HealthKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +201,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B93946342C7657630037C35A /* ContentView.swift in Sources */,
+				B91527D92C7982E300A4AF5D /* HealthHelper.swift in Sources */,
+				B9333B172C76A1F400FC796E /* ContentModel.swift in Sources */,
+				B9637E9C2C77CAE400CCD24E /* SIzes.swift in Sources */,
+				B91B4F892C79761F00749A98 /* HealthFetch.swift in Sources */,
 				B93946322C7657630037C35A /* SolisApp.swift in Sources */,
+				B9637E9A2C76A5DC00CCD24E /* HomeView.swift in Sources */,
+				B9637E9F2C78ED8F00CCD24E /* HealthManager.swift in Sources */,
+				B9333B152C76A1E700FC796E /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,27 +339,36 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Solis/Solis.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Solis/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Solis/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 6R2E9P9EPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Solis;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Solis uses your Health data to display weight and step counts";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Solis uses your Health data to display weight and step counts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = waked.Solis;
+				PRODUCT_BUNDLE_IDENTIFIER = waked.solis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -298,27 +377,36 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Solis/Solis.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Solis/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Solis/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 6R2E9P9EPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Solis;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Solis uses your Health data to display weight and step counts";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Solis uses your Health data to display weight and step counts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = waked.Solis;
+				PRODUCT_BUNDLE_IDENTIFIER = waked.solis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

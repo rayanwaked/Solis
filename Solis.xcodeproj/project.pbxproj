@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B9095A132C7D256300A4E6A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B91527D82C7982E300A4AF5D /* HealthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthHelper.swift; sourceTree = "<group>"; };
 		B91B4F882C79761F00749A98 /* HealthFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthFetch.swift; sourceTree = "<group>"; };
 		B9333B142C76A1E700FC796E /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 		B93946302C7657630037C35A /* Solis */ = {
 			isa = PBXGroup;
 			children = (
+				B9095A132C7D256300A4E6A9 /* Info.plist */,
 				B9637EA02C78EDD300CCD24E /* Solis.entitlements */,
 				B93946312C7657630037C35A /* SolisApp.swift */,
 				B9333B122C76A1AF00FC796E /* Modules */,
@@ -346,6 +348,7 @@
 				DEVELOPMENT_TEAM = 6R2E9P9EPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Solis/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Solis;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Solis uses your Health data to display weight and step counts";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Solis uses your Health data to display weight and step counts";
@@ -384,6 +387,7 @@
 				DEVELOPMENT_TEAM = 6R2E9P9EPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Solis/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Solis;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Solis uses your Health data to display weight and step counts";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Solis uses your Health data to display weight and step counts";

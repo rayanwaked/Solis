@@ -1,5 +1,9 @@
 <img width="2081" alt="Screenshot 2024-08-26 at 3 22 19 PM" src="https://github.com/user-attachments/assets/a8531fb2-c2e0-434f-9e6b-77e51f31987e">
 
+# Solis
+
+Solis is single screen app that displays the user's weight, water in-take, and total step count. It utilizes SwiftUI and HealthKit for its main features.
+
 ## Project Structure
 
 ```

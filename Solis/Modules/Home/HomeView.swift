@@ -16,7 +16,7 @@ struct HomeView: View {
     var body: some View {
         VStack(spacing: 0) {
             header
-            stats
+            headline
             weight
             HStack(spacing: 0) {
                 water
@@ -24,6 +24,7 @@ struct HomeView: View {
             }
         }
         .onAppear(perform: healthManager.requestAuthorization)
+        .background(Image("BackgroundImage").resizable().ignoresSafeArea(.all))
     }
 }
 
@@ -33,41 +34,42 @@ private extension HomeView {
     var header: some View {
         HStack {
             Text("Solis")
-                .font(.largeTitle).fontWeight(.heavy)
+                .headerFont()
             Spacer()
         }
         .padding()
-        .background(Color.indigo)
     }
     
-    // MARK: - STATS
-    var stats: some View {
-        VStack {
-            
+    // MARK: - HEADLINE
+    var headline: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                Text("Your Health Snapshot Today")
+                    .headlineFont()
+            }
+            .padding()
+            Spacer()
         }
-        .frame(maxWidth: width, maxHeight: height)
-        .background(Color.blue)
+        .frame(maxWidth: width, maxHeight: height / 6)
     }
     
     // MARK: - WEIGHT
+    @ViewBuilder
     var weight: some View {
+        let latestDate = healthManager.weightThisWeek.keys.sorted().last
+        let latestWeight = healthManager.weightThisWeek[latestDate ?? Date()] ?? 0.0
+        
         VStack {
             HStack {
                 Text("Weight")
-                    .fontWeight(.medium)
-                    .font(.system(size: 30))
-                    .padding()
+                    .subheadFont()
                 Spacer()
                 if let latestDate = healthManager.weightThisWeek.keys.sorted().last {
                     Text("\(healthManager.weightThisWeek[latestDate] ?? 0.0, specifier: "%.2f") lbs")
-                        .fontWeight(.medium)
-                        .font(.system(size: 30))
-                        .padding()
+                        .subheadFont()
                 } else {
                     Text("No Data")
-                        .fontWeight(.medium)
-                        .font(.system(size: 30))
-                        .padding()
+                        .subheadFont()
                 }
             }
             Spacer()
@@ -81,12 +83,13 @@ private extension HomeView {
                     .interpolationMethod(.catmullRom)
                 }
             }
+            .chartYScale(domain: latestWeight / 1.01...latestWeight * 1.01)
             .padding()
-            .frame(maxWidth: .infinity, maxHeight: 300)
+            .frame(maxWidth: width, maxHeight: height)
             .background(Color.gray.opacity(0.1))
         }
-        .frame(maxWidth: width, maxHeight: height / 3.25)
-        .background(Color.gray)
+        .padding()
+        .frame(maxWidth: width, maxHeight: height)
     }
     
     // MARK: - WATER
@@ -94,16 +97,12 @@ private extension HomeView {
         VStack(alignment: .leading, spacing: -10) {
             Spacer()
             Text("\(healthManager.waterToday)")
-                .fontWeight(.black)
-                .font(.system(size: 44))
-                .padding(.leading)
+                .largeFont()
             Text("water")
-                .fontWeight(.medium)
-                .font(.system(size: 30))
-                .padding(.leading)
+                .subheadFont()
         }
-        .frame(maxWidth: width, maxHeight: height * 0.125, alignment: .leading)
-        .background(Color.yellow)
+        .padding(.leading)
+        .frame(maxWidth: width, maxHeight: height * 0.15, alignment: .leading)
     }
     
     // MARK: - STEPS
@@ -111,18 +110,34 @@ private extension HomeView {
         VStack(alignment: .leading, spacing: -10) {
             Spacer()
             Text("\(healthManager.stepsToday)")
-                .fontWeight(.black)
-                .font(.system(size: 44))
-                .padding(.leading)
+                .largeFont()
             Text("steps")
-                .fontWeight(.medium)
-                .font(.system(size: 30))
-                .padding(.leading)
+                .subheadFont()
         }
-        .frame(maxWidth: width, maxHeight: height * 0.125, alignment: .leading)
-        .background(Color.orange)
+        .padding(.leading)
+        .frame(maxWidth: width, maxHeight: height * 0.15, alignment: .leading)
     }
 }
+
+// MARK: - FONT MODIFIERS
+private extension View {
+    func headerFont() -> some View {
+        font(.largeTitle).fontWeight(.heavy)
+    }
+    
+    func headlineFont() -> some View {
+        font(.system(size: 38)).fontWeight(.bold)
+    }
+    
+    func largeFont() -> some View {
+        font(.system(size: 44)).fontWeight(.black)
+    }
+    
+    func subheadFont() -> some View {
+        font(.system(size: 30)).fontWeight(.medium)
+    }
+}
+
 
 // MARK: - PREVIEW
 #Preview {

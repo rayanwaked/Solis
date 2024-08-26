@@ -13,7 +13,7 @@ import SwiftUI
 struct SolisApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
